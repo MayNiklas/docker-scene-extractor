@@ -7,7 +7,7 @@
 name: Building docker containers
 on:
   push:
-    branches: master
+    branches: main
 jobs:
   building:
     runs-on: ubuntu-latest
