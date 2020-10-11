@@ -61,7 +61,7 @@ jobs:
           docker push "${{ secrets.DOCKER_USERNAME }}"/"${{ secrets.DOCKER_REPOSITORY }}":amd64-latest
 
   manifest-create:
-    needs: [building-arm64v8, building-amd64]
+    needs: [building-arm64v8, building-arm32v7, building-amd64]
     runs-on: ubuntu-latest
     steps:
       - name: setup-docker
