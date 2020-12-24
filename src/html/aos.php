@@ -21,7 +21,7 @@
       	$start = ((60*$startm)+$starts);
       	$end = (((60*$endm)+$ends)-$start);
 
-      	$pfad = "/source/Marvel's Agents of S.H.I.E.L.D/";
+      	$pfad = "/source/";
 
       	$list="cd \"$pfad\" && ls -d */* | grep $episode";
       	$video=exec("$list");
