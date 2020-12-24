@@ -1,11 +1,12 @@
 # docker-scene-extractor
 
+### Example docker-compose.yml
 ```
 ---
 version: "2.1"
 services:
   scene-extractor:
-    image: mayniki/scene-extractor
+    build: src
     volumes:
       - "./output:/var/www/html/dl:rw"
       - "source:/source:ro"
@@ -17,5 +18,6 @@ volumes:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.5.10,nolock,soft,ro"
-      device: ":/volume1/plex-media/shows/"
+      device: ":/volume1/plex-media/shows/(2013) Marvel's Agents of S.H.I.E.L.D/"
 ```
+Just make sure to mount the correct folder to /source
