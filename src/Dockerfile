@@ -10,3 +10,5 @@ RUN apt-get install -y \
 
 COPY html/ /var/www/html/
 
+CMD chown -R www-data:www-data /var/www/html/dl/ && \
+    apachectl -D FOREGROUND
